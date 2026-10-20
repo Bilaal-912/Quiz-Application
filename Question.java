@@ -3,7 +3,17 @@ public class Question {
     private String question;
     private String opt1,opt2,opt3,opt4;
     private String answer;
-    
+
+    public Question(int id, String question, String opt1, String opt2, String opt3, String opt4, String answer) {
+        this.id = id;
+        this.question = question;
+        this.opt1 = opt1;
+        this.opt2 = opt2;
+        this.opt3 = opt3;
+        this.opt4 = opt4;
+        this.answer = answer;
+    }
+
     public int getId() {
         return id;
     }
@@ -46,4 +56,20 @@ public class Question {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Question{");
+        sb.append("id=").append(id);
+        sb.append(", question=").append(question);
+        sb.append(", opt1=").append(opt1);
+        sb.append(", opt2=").append(opt2);
+        sb.append(", opt3=").append(opt3);
+        sb.append(", opt4=").append(opt4);
+        sb.append(", answer=").append(answer);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }
